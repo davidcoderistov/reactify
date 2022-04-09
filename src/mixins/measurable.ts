@@ -1,16 +1,16 @@
 import { convertToUnit } from '../util/helpers'
 import { NumberOrNumberString } from '../types'
 
-type MeasurableStylesArgs = {
-    height: NumberOrNumberString,
-    maxHeight: NumberOrNumberString,
-    maxWidth: NumberOrNumberString,
-    minHeight: NumberOrNumberString,
-    minWidth: NumberOrNumberString,
-    width: NumberOrNumberString,
+export type MeasurableProps = {
+    height?: NumberOrNumberString,
+    maxHeight?: NumberOrNumberString,
+    maxWidth?: NumberOrNumberString,
+    minHeight?: NumberOrNumberString,
+    minWidth?: NumberOrNumberString,
+    width?: NumberOrNumberString,
 }
 
-export function measurableStyles(measurableStylesArg: MeasurableStylesArgs): object {
+export function measurableStyles(measurableStylesArg: MeasurableProps): object {
     const styles: Record<string, string> = {}
 
     const height = convertToUnit(measurableStylesArg.height)

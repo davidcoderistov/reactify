@@ -1,11 +1,11 @@
 
 
-type RoundableArgs = {
-    rounded: boolean | string,
-    tile: boolean,
+export type RoundableProps = {
+    rounded?: boolean | string,
+    tile?: boolean,
 }
 
-export function roundedClasses(roundableArgs: RoundableArgs): Record<string, boolean> {
+export function roundedClasses(roundableArgs: RoundableProps): Record<string, boolean> {
     const composite = []
     const rounded = typeof roundableArgs.rounded === 'string'
         ? String(roundableArgs.rounded)
