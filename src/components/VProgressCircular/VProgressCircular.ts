@@ -23,7 +23,7 @@ type VProgressCircularProps = {
     children?: any,
 } & ColorableProps
 
-export function VProgressCircular(props: VProgressCircularProps) {
+export default function VProgressCircular(props: VProgressCircularProps) {
     // Props
     const {
         color,
